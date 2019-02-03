@@ -1,1 +1,1 @@
-# Introductory-to-Mathematical-Finance
+# Introductory-Mathematical-Finance
