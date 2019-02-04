@@ -1,0 +1,226 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[b5paper, portrait, top=2.8cm, bottom=2.8cm, left=2.5cm, right=2.5cm]{geometry}
+
+\begin{document}
+	{\setstretch{1.0}
+		\thispagestyle{empty}
+		\begin{flushleft}
+			\includegraphics[width=75px]{lambang-its-color-std.png}\\
+			{\fontfamily{cmss}\selectfont
+				\vspace{6cm}
+				GROUP HOMEWORK\\
+				INTRODUCTORY FINANCIAL MATHEMATICS CLASS - SM141432\\
+				\vspace{0.2cm}
+				\textbf{1st HOMEWORK}\vspace{0.4cm}
+				
+				\begin{minipage}{10cm}
+					\flushleft
+					NOVITA PUSPITASARI\\NRP 0611 1440000 011\\ \vspace{0.15cm}
+					VENANSIUS RYAN TJAHJONO\\NRP 0611 1440000 043\\ \vspace{0.15cm}
+					YUSRIL IZZA FRIZNAINI\\NRP 0611 1540000 048\\ \vspace{0.15cm}
+					WINDA FIRDIANA\\NRP 0611 1440000 051\\ \vspace{0.15cm}
+				\end{minipage}
+				\\
+				\vspace{1cm}
+				Lecturer: \\
+				Endah Rokhmati Merdika Putri, S.Si, M.T, Ph.D\\
+				\vspace{1cm}
+				\textbf{DEPARTMENT OF MATHEMATICS}\\
+				Faculty of Mathematics, Computing, and Data Science\\
+				Sepuluh Nopember Institute of Technology\\
+				Surabaya 2018\\
+			}
+		\end{flushleft}
+	}
+	\pagebreak
+	\textbf{Questions}\\
+	\begin{enumerate}
+		\item Taken from General Interest Rate, what is happening if $m\rightarrow\infty$? Clue: derive the equation $\displaystyle\lim_{m\rightarrow\infty}P_0\big(1+\frac{r}{m}\big)^{mn}$.
+		\item Suppose that you are to receive payments (in thousands
+		of dollars) at the end of each of the next five years. Which of the following
+		three payment sequences is preferable? 
+		\begin{enumerate}
+			\item [\textbf{A.}] 12, 14, 16, 18, 20
+			\item [\textbf{B.}] 16, 16, 15, 15, 15
+			\item [\textbf{C.}] 20, 16, 14, 12, 10
+		\end{enumerate}
+		Do your calculation for $r=5\%$, $r=10\%$, and $r=15\%$. Answer it with detail explanation, as a Lender or as a Buyer.
+		\item A company needs a certain type of machine for the next
+		five years. They presently own such a machine, which is now worth
+		\$6,000 but will lose \$2,000 in value in each of the next three years, after
+		which it will be worthless and unuseable. The (beginning-of-the-year)
+		value of its yearly operating cost is \$9,000, with this amount expected
+		to increase by \$2,000 in each subsequent year that it is used. A new machine
+		can be purchased at the beginning of any year for a fixed cost of
+		\$22,000. The lifetime of a new machine is six years, and its value decreases
+		by \$3,000 in each of its first two years of use and then by \$4,000
+		in each following year. The operating cost of a new machine is \$6,000 in its first year, with an increase of \$1,000 in each subsequent year. If the
+		interest rate is 10\%, when should the company purchase a new machine? 
+	\end{enumerate}
+
+	\pagebreak
+	\textbf{Solutions}
+	\begin{enumerate}
+		\item Will be derived the equation $\displaystyle\lim_{m\rightarrow\infty}P_0\left(1+\frac{r}{m}\right)^{mn}$ for knowing the Interest Rate formula for $m\rightarrow\infty$.\vspace{0.5cm}\\
+		\begin{tabular}{cll}
+			$\displaystyle\lim_{m\rightarrow\infty}P_0\left(1+\frac{r}{m}\right)^{mn}$&=&$P_0\displaystyle\lim_{m\rightarrow\infty}\left(1+\frac{r}{m}\right)^{mn}$\vspace{0.15cm}\\
+			&=&$P_0\displaystyle\lim_{m\rightarrow\infty}\left(1+\frac{1}{\frac{m}{r}}\right)^{mn}$\vspace{0.15cm}\\
+			&=&$P_0\displaystyle\left(\lim_{m\rightarrow\infty}\left(1+\frac{1}{\frac{m}{r}}\right)^{\frac{m}{r}}\right)^{rn}$\vspace{0.15cm}\\
+		\end{tabular}\\
+		Then, for any $0<r<1$, we know $\displaystyle p=\frac{m}{r}\rightarrow\infty$, then\vspace{0.15cm}\\
+		\begin{tabular}{cll}
+			$P_0\displaystyle\left(\lim_{m\rightarrow\infty}\left(1+\frac{1}{\frac{m}{r}}\right)^{\frac{m}{r}}\right)^{rn}$&=&$P_0\displaystyle\left(\lim_{p\rightarrow\infty}\left(1+\frac{1}{p}\right)^{p}\right)^{rn}$\vspace{0.15cm}\\
+		\end{tabular}\\
+		By using the Euler formula $\displaystyle\lim_{x\rightarrow\infty}\left(1+\frac{1}{x}\right)^x=e$, we can conclude that \\ 
+		\begin{equation*}
+		\fbox{%
+			$\displaystyle\lim_{m\rightarrow\infty}P_0\left(1+\frac{r}{m}\right)^{mn}=P_0e^{rn}$
+		}
+		\end{equation*}
+		
+		\item Firstly, we have to find the present value based on the case. For doing calculation, we used Microsoft Excel. Using formula $PV=FV(1+r)^{-n}$ for $r=5\%$, $r=10\%$, and $r=15\%$\vspace{-0.5cm}\\
+		\begin{itemize}
+			\item for $r=5\%$
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					\textbf{Present Value }&\textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{Total PV}\\\hline
+					\textbf{A}&11.43&12.70&13.82&14.81&15.67&68.43\\\hline
+					\textbf{B}&15.24&14.51&12.96&12.34&11.75&66.80\\\hline
+					\textbf{C}&19.05&14.51&12.09&9.87&7.84&63.36\\\hline
+				\end{tabular}
+			\end{center}
+			\item for $r=10\%$
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					\textbf{Present Value }&\textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{Total PV}\\\hline
+					\textbf{A}&10.91&11.57&12.02&12.29&12.42&59.21\\\hline
+					\textbf{B}&14.55&13.22&11.27&10.25&9.31&58.60\\\hline
+					\textbf{C}&18.18&13.22&10.52&8.20&6.21&56.33\\\hline
+				\end{tabular}
+			\end{center}
+			\item for $r=15\%$
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					\textbf{Present Value }&\textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{Total PV}\\\hline
+					\textbf{A}&10.43&10.59&10.52&10.29&9.94&51.78\\\hline
+					\textbf{B}&13.91&12.10&9.86&8.58&7.46&51.91\\\hline
+					\textbf{C}&17.39&12.10&9.21&6.86&4.97&50.53\\\hline
+				\end{tabular}
+			\end{center}
+		\end{itemize}
+	Secondly, based on the result, we can conclude :
+	\begin{itemize}
+		\item As a Lender, the best option is :
+		\begin{itemize}
+			\item[a.] For $r=5\%$, take option \textbf{A}
+			\item[b.] For $r=10\%$, take option \textbf{A}
+			\item[c.] For $r=15\%$, take option \textbf{B}
+		\end{itemize}
+		\item As a Buyer, the best option is : 
+		\begin{itemize}
+			\item[a.] For $r=5\%$, take option \textbf{C}
+			\item[b.] For $r=10\%$, take option \textbf{C}
+			\item[c.] For $r=15\%$, take option \textbf{C}
+		\end{itemize}
+	\end{itemize}
+	\vspace{0.5cm}
+	After doing some calculation, our group has found few interested things. Let's take a look for $r=20\%$ and $r=30\%$
+	\begin{itemize}
+		\item for $r=20\%$
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|}
+				\hline
+				\textbf{Present Value }&\textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{Total PV}\\\hline
+				\textbf{A}&10.00&9.72&9.26&8.68&8.04&45.70\\\hline
+				\textbf{B}&13.33&11.11&8.68&7.23&6.03&46.39\\\hline
+				\textbf{C}&16.67&11.11&8.10&5.79&4.02&45.69\\\hline
+			\end{tabular}
+		\end{center}
+		\item for $r=30\%$
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|}
+				\hline
+				\textbf{Present Value }&\textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{Total PV}\\\hline
+				\textbf{A}&9.23&8.28&7.28&6.30&5.39&36.49\\\hline
+				\textbf{B}&12.31&9.47&6.83&5.25&4.04&37.89\\\hline
+				\textbf{C}&15.38&9.47&6.37&4.20&2.69&38.12\\\hline
+			\end{tabular}
+		\end{center}
+	\end{itemize}
+		Based on the table above, we can conclude :
+		\begin{itemize}
+			\item As a Lender, the best option is :
+			\begin{itemize}
+				\item[a.] For $r=20\%$, take option \textbf{B}
+				\item[b.] For $r=30\%$, take option \textbf{C}
+			\end{itemize}
+			\item As a Buyer, the best option is : 
+			\begin{itemize}
+				\item[a.] For $r=20\%$, take option \textbf{C}
+				\item[b.] For $r=30\%$, take option \textbf{A}
+			\end{itemize}
+		\end{itemize}\vspace{0.5cm}
+		From all of the results we had, our group have hypothesis that \textbf{for larger $r>0$}, the best option for a Lender is option C and the best option for a Buyer is option A.
+		
+		\pagebreak
+		\item Let's take a look for the case. It describes :
+		\begin{itemize}
+			\item Old Machine
+			\begin{itemize}
+				\item[a.] Worth for \$6,000 and will lose in value \$2000 yearly, then worthless and unusable.
+				\item[b.] Its operating cost is \$9,000 yearly and increases \$2,000 in each year that it is used.
+			\end{itemize}
+			\item New Machine
+			\begin{itemize}
+				\item[a.] Can be bought for \$22,000 in the beginning of any year.
+				\item[b.] Has 6 years lifetime. Its value decreases by \$3,000 in each of first two years and \$4,000 in the next following year.
+				\item[c.] Has operating cost \$6,000 in its first year and increases \$1,000 in each subsequent year.
+			\end{itemize}
+		\end{itemize}
+		From the information above, \textbf{there are only four types of assumptions} because the old machine's life is three years starts from 0, 1, 2, 3. Afterwards, let's take a look for case 3 when the company bought the machine in the beginning of year 3.
+		\begin{itemize}
+			\item First cash flows\\
+			The company doesn't buy a new machine, but use its old machine, so we will have \$9,000 for its operating cost. \textbf{[\$9,000]}
+			\item Second cash flows\\
+			In year 2, the company still operating its old machine, so we will have $\$9,000+\$2,000$ for its operating cost. \textbf{[\$11,000]}
+			\item Third cash flows\\
+			In year 3, the company decides to buy a new machine. It means that the old machine still worth for $\$6,000-\$2,000-\$2,000$ (The company sells the machine and get \$2,000). Knowing from the case, a new machine is purchased for \$22,000 and its operating cost is \$6,000. \textbf{[\$26,000]}
+			\item Fourth cash flows\\
+			In year 4, the company use its new machine which they bought last year, so the company must pay $\$6,000+\$1,000$ for its operating cost. In the other hand, its new machine will lose in value \$3,000 becomes \$19,000. \textbf{[\$7,000]}
+			\item Fifth cash flows\\
+			In year 5, the company use its new machine which they bought last two year, so the company must pay $\$6,000+\$2,000$ for its operating cost. In the other hand, its new machine will lose again in value \$3,000 becomes \$16,000. \textbf{[\$8,000]}
+			\item Sixth cash flows\\
+			In year 6, the company decided to sell it's machine and its worth for $\$16,000-\$4,000=\$12,000$. So, the company will received \$12,000. \textbf{[-\$12,000]}
+		\end{itemize}
+	From the explanation above, we have the sequence \textit{(in thousand dollars)} as written in the textbook \{9, 11, 26, 7, 8, $-$12\}. With the same way, we have the six-year cash flows for case 1, 2, and 4 as follows:\vspace{-0.5cm}\\
+	\begin{itemize}
+		\item Case 1: \{22, 7, 8, 9, 10, $-$4\}
+		\item Case 2: \{9, 24, 7, 8, 9, $-$8\}
+		\item Case 3: \{9, 11, 26, 7, 8, $-$12\}
+		\item Case 4: \{9, 11, 13, 28, 7, $-$16\}
+	\end{itemize}
+	To analyze when the company should buy the machine, we use present analysis formula where $PV=FV(1+r)^{-n}$. By applying the formula to all sequences above and we will have the results in table as follows.\vspace{-0.5cm}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			\textbf{Present Value }&\textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{6}&\textbf{Total PV}\\\hline
+			\textbf{A}&22.00&6.36&6.61&6.76&6.83&$-$2.48&46.083\\\hline
+			\textbf{B}&9.00&21.82&5.79&6.01&6.15&$-$4.97&43.794\\\hline
+			\textbf{C}&9.00&10.00&21.49&5.26&5.46&$-$7.45&43.760\\\hline
+			\textbf{D}&9.00&10.00&10.74&21.04&4.78&$-$9.93&45.627\\\hline
+		\end{tabular}
+	\end{center}
+	From the result, we have decided the company must buy a new machine at the beginning of year 3 \textit{(two years from now)}.
+	\end{enumerate}
+	\vspace{10cm}
+	\textit{\textbf{Note: Excel file for calculation is included in the email.}}
+\end{document}
