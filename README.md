@@ -1,1 +1,2 @@
 # Introductory-Mathematical-Finance
+Options are traded both on exchanges and in the over-the-counter market. There are two types of options. A call option gives the holder the right to buy the underlying asset by a certain date (maturity date) for a certain price (strike price). There are so many methods to determine the cost of options, one of them is binomial tree method. In this project, we developed a simulation for option pricing with binomial tree method. Array-based are used to construct the binomial tree method.
